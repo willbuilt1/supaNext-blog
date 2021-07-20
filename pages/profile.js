@@ -16,11 +16,11 @@ function Profile(props) {
   return props.children;
 }
 
-export default function AuthProfile() {
+export default function AuthBasic() {
   return (
     <Auth.UserContextProvider supabaseClient={supabase}>
       <Profile supabaseClient={supabase}>
-        <Auth supabaseClient={supabase} />
+        <Auth supabaseClient={supabase} providers={['google']} />
       </Profile>
     </Auth.UserContextProvider>
   );
