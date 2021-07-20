@@ -20,7 +20,7 @@ export default function AuthBasic() {
   return (
     <Auth.UserContextProvider supabaseClient={supabase}>
       <Profile supabaseClient={supabase}>
-        <Auth supabaseClient={supabase} providers={['google']} />
+        <Auth supabaseClient={supabase} providers={['google', 'github']} />
       </Profile>
     </Auth.UserContextProvider>
   );
